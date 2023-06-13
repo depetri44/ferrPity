@@ -95,15 +95,15 @@ const footerLinks = [
     links: [
       {
         name: "Facebook",
-        redirect: "https://www.facebook.com/flipkart",
+        redirect: "https://www.facebook.com/nicolas.depetri",
       },
       {
         name: "Twitter",
-        redirect: "https://twitter.com/flipkart",
+        redirect: "https://facebook.com/nicolas.depetri",
       },
       {
         name: "YouTube",
-        redirect: "https://www.youtube.com/flipkart",
+        redirect: "https://www.facebook.com/nicolas.depetri",
       }
     ]
   }
@@ -181,7 +181,7 @@ const Footer = () => {
               <span className="text-yellow-400"><HelpIcon sx={{ fontSize: "20px" }} /></span> Help Center
             </a>
 
-            <span>&copy; 2007-{new Date().getFullYear()} Flipkart.com</span>
+            <span>&copy; 2007-{new Date().getFullYear()} Desarrollado por Nicolás Depetri</span>
             <img draggable="false" src={paymentMethods} alt="Card Payment" />
           </div>
         </>
