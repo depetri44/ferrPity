@@ -80,7 +80,7 @@ const OrderTable = () => {
             flex: 0.2,
             renderCell: (params) => {
                 return (
-                    <span>${params.row.amount.toLocaleString()}</span>
+                    <span>₹{params.row.amount.toLocaleString()}</span>
                 );
             },
         },

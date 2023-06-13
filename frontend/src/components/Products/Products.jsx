@@ -16,7 +16,8 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import StarIcon from '@mui/icons-material/Star';
 import { categories } from '../../utils/constants';
-import MetaData from '../Layouts/MetaData'; 
+import MetaData from '../Layouts/MetaData';
+import { getRandomProducts } from '../../utils/functions';
 import { useLocation } from 'react-router-dom';
 
 const Products = () => {
@@ -37,7 +38,6 @@ const Products = () => {
     const [categoryToggle, setCategoryToggle] = useState(true);
     const [ratingsToggle, setRatingsToggle] = useState(true);
 
-    // eslint-disable-next-line no-unused-vars
     const { products, loading, error, productsCount, resultPerPage, filteredProductsCount } = useSelector((state) => state.products);
     const keyword = params.keyword;
 
@@ -97,9 +97,9 @@ const Products = () => {
                                     />
 
                                     <div className="flex gap-3 items-center justify-between mb-2 min-w-full">
-                                        <span className="flex-1 border px-4 py-1 rounded-sm text-gray-800 bg-gray-50">${price[0].toLocaleString()}</span>
+                                        <span className="flex-1 border px-4 py-1 rounded-sm text-gray-800 bg-gray-50">₹{price[0].toLocaleString()}</span>
                                         <span className="font-medium text-gray-400">to</span>
-                                        <span className="flex-1 border px-4 py-1 rounded-sm text-gray-800 bg-gray-50">${price[1].toLocaleString()}</span>
+                                        <span className="flex-1 border px-4 py-1 rounded-sm text-gray-800 bg-gray-50">₹{price[1].toLocaleString()}</span>
                                     </div>
                                 </div>
                                 {/* price slider filter */}

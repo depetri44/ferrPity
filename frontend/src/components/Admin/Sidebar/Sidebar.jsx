@@ -111,7 +111,7 @@ const Sidebar = ({ activeTab, setToggleSidebar }) => {
             <div className="flex flex-col gap-1 bg-gray-700 p-3 rounded-lg shadow-lg mb-6 mt-28 mx-3.5 overflow-hidden">
                 <h5>Desarrollado por:</h5>
                 <div className="flex flex-col gap-0">
-                    <a href="//fb.com/nicolas.depetri" target="_blank" rel="noreferrer" className="font-medium text-lg hover:text-blue-500">Nicolás Depetri</a>
+                    <a href="#" target="_blank" rel="noreferrer" className="font-medium text-lg hover:text-blue-500">Nicolás Depetri</a>
                     <a href="mailto:nicolasdepetri@hotmail.com" className="text-gray-300 text-sm hover:text-blue-500">nicolasdepetri@hotmail.com</a>
                 </div>
             </div>
