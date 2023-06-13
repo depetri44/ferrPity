@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
-import { Doughnut, Line, Pie, Bar } from 'react-chartjs-2';
+import { Chart as ChartJS, Doughnut, Line, Pie, Bar } from 'react-chartjs-2';
+ChartJS.register(Doughnut, Line, Pie, Bar); 
 import { getAdminProducts } from '../../actions/productAction';
 import { useSelector, useDispatch } from 'react-redux';
 import { getAllOrders } from '../../actions/orderAction';
 import { getAllUsers } from '../../actions/userAction';
 import { categories } from '../../utils/constants';
 import MetaData from '../Layouts/MetaData';
-
 const MainData = () => {
 
     const dispatch = useDispatch();
@@ -89,7 +89,7 @@ const MainData = () => {
                 borderColor: '#9333ea',
                 backgroundColor: '#9333ea',
                 hoverBackgroundColor: '#6b21a8',
-                data: categories.map((cat) => products?.filter((item) => item.category === cat).length),
+                data: categories.map((cat) => products?.filter(item => item.category === cat).length),
             },
         ],
     };
