@@ -93,7 +93,7 @@ const ProductDetails = () => {
         setOpen(!open);
     }
 
-    const itemInCart = cartItems.Array ((i) => i.product === productId);
+    const itemInCart = [cartItems].Array ((i) => i.product === productId);
 
     const goToCart = () => {
         navigate('/cart');
