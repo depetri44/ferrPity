@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
-import { Chart as ChartJS, Doughnut, Line, Pie, Bar } from 'react-chartjs-2';
-ChartJS.register(Doughnut, Line, Pie, Bar); 
 import { getAdminProducts } from '../../actions/productAction';
 import { useSelector, useDispatch } from 'react-redux';
 import { getAllOrders } from '../../actions/orderAction';
 import { getAllUsers } from '../../actions/userAction';
 import { categories } from '../../utils/constants';
 import MetaData from '../Layouts/MetaData';
+import { Chart as ChartJS, Doughnut, Line, Pie, Bar } from 'react-chartjs-2';
+ChartJS.register(Doughnut, Line, Pie, Bar); 
 const MainData = () => {
 
     const dispatch = useDispatch();
