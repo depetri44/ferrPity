@@ -35,7 +35,11 @@ const Cart = () => {
                                 <EmptyCart />
                             )}
 
+<<<<<<< HEAD
                             {cartItems && [cartItems].item.map(item => (
+=======
+                            {cartItems && cartItems.item.map((item) => (
+>>>>>>> parent of 0ce1303 (Update Cart.jsx)
                                 <CartItem {...item} inCart={true} />
                             )
                             )}
