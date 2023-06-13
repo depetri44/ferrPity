@@ -1,12 +1,13 @@
 import { useEffect } from 'react';
+import Chart from 'chart.js/auto'
+import { Doughnut, Line, Pie, Bar } from 'react-chartjs-2';
 import { getAdminProducts } from '../../actions/productAction';
 import { useSelector, useDispatch } from 'react-redux';
 import { getAllOrders } from '../../actions/orderAction';
 import { getAllUsers } from '../../actions/userAction';
 import { categories } from '../../utils/constants';
 import MetaData from '../Layouts/MetaData';
-import { Chart as ChartJS, Doughnut, Line, Pie, Bar } from 'react-chartjs-2';
-ChartJS.register(Doughnut, Line, Pie, Bar); 
+
 const MainData = () => {
 
     const dispatch = useDispatch();
@@ -89,7 +90,7 @@ const MainData = () => {
                 borderColor: '#9333ea',
                 backgroundColor: '#9333ea',
                 hoverBackgroundColor: '#6b21a8',
-                data: categories.map((cat) => products?.filter(item => item.category === cat).length),
+                data: categories.map((cat) => products?.filter((item) => item.category === cat).length),
             },
         ],
     };
@@ -101,7 +102,7 @@ const MainData = () => {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-6">
                 <div className="flex flex-col bg-purple-600 text-white gap-2 rounded-xl shadow-lg hover:shadow-xl p-6">
                     <h4 className="text-gray-100 font-medium">Total Sales Amount</h4>
-                    <h2 className="text-2xl font-bold">${totalAmount?.toLocaleString()}</h2>
+                    <h2 className="text-2xl font-bold">₹{totalAmount?.toLocaleString()}</h2>
                 </div>
                 <div className="flex flex-col bg-red-500 text-white gap-2 rounded-xl shadow-lg hover:shadow-xl p-6">
                     <h4 className="text-gray-100 font-medium">Total Orders</h4>
