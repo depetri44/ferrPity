@@ -34,7 +34,7 @@ const Cart = () => {
                             {cartItems && cartItems.length === 0 && (
                                 <EmptyCart />
                             )}
-                            {cartItems && [cartItems].item.map(item => (
+                            {cartItems && [cartItems].map(item => (
                                 <CartItem {...item} inCart={true} />
                             )
                             )}
