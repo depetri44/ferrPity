@@ -92,9 +92,9 @@ const ProductDetails = () => {
     const handleDialogClose = () => {
         setOpen(!open);
     }
+ 
 
-    const itemInCart = [cartItems].Array ((i) => i.product === productId);
-
+    const itemInCart  = [cartItems].some(i => i.product === productId );
     const goToCart = () => {
         navigate('/cart');
     }
